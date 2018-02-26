@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Appius</title>
+        <link rel = "stylesheet" type = "text/css" href = "AppiusStyle.css" />
+        <script type="text/javascript">
+            function startClock()
+            {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                h = checkTime(h);
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
+                var t = setTimeout(startClock, 500);
+            }
+            function checkTime(i) 
+            {
+                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                return i;
+            }
+            function myPopup() 
+            {
+                    var popup = document.getElementById("myPopup");
+                    popup.classList.toggle("show");
+            }
+        </script>
+    </head>
+    <body onload="startClock()">
+        <div class="dropdown"> 
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+            <a href="">Sensor History</a>
+            <a href="">Calendar</a>
+            <a href="">Timer</a>
+            <a href="">Options</a>
+            </div> 
+        </div>
+        <span class = "header">Current Time:
+        <span id="clock"></span>
+        | Rain Status: -Placeholder-
+        | Temperature: -Placeholder-
+        </span>
+        <div class = "centerscreen">
+            <h1><i><b>Appius-Smart Irrigation Network</b></i></h1>
+            <h2>Central Water Control</h2>
+            <div class="switch">
+                <input type="checkbox" name="flow" class="switch-checkbox" id="switch" unchecked>
+                <label class="switch-label" for="switch"></label>
+            </div>
+            
+            <h3>OFF | ON</h3>
+            <table style="width:100%">
+                <tr>
+                  <th>Section 1</th>
+                  <th>Section 2</th> 
+                  <th>Section 3</th>
+                  <th>Section 4</th>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" class="button sectionbox" /></td>
+                  <td><input type="checkbox" class="sectionbox" /></td> 
+                  <td><input type="checkbox" class="sectionbox" /></td>
+                  <td><input type="checkbox" class="sectionbox" /></td>
+                </tr>
+                <tr>
+                    <td>OFF | ON</td>
+                    <td>OFF | ON</td>
+                    <td>OFF | ON</td>
+                    <td>OFF | ON</td>
+                </tr>
+            </table>
+            <button class="button" >Submit</button>
+        </div>
+    </body>
+</html>

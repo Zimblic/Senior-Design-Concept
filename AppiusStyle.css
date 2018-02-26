@@ -1,0 +1,137 @@
+/*
+	Joshua Oden
+	15 October 2017
+	Cascading Style Sheet for Senior Design GUI.
+*/
+*		{font-family: Arial;}
+body
+{
+    background: #09729b;
+    background: -webkit-linear-gradient(left top,#f1ee03, #09729b, #120A4F)fixed; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right,  #f1ee03, #09729b, #120A4F)fixed; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #f1ee03, #09729b, #120A4F)fixed; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right,  #f1ee03, #09729b, #120A4F) fixed;
+    color: white; 
+}
+.header {font-style: italic; font-weight: bold; margin-left: auto; margin-right: auto;}				
+.centerscreen
+{
+    text-align: center;
+    border-radius: 30px; padding: 14px 16px; /*Shadowed and rounded box.*/
+    border: solid 10px #000;
+    background-color: #23143f;
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 5px black;
+}
+/*------------DROPDOWN BUTTON--------------- */
+.dropbtn 
+{
+    display: inline-block;
+    background-color: #32cec1;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown 
+{
+    position: relative;
+    display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn 
+{
+    background-color: #2441e6;
+}
+/*------------CHECKBOX SWITCH--------------- */
+.switch 
+{
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 89px;
+    user-select:none; -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.switch-checkbox 
+{
+    display: none;
+}
+.switch-label 
+{
+    display: block; overflow: hidden; cursor: pointer;
+    height: 44px; padding: 0; line-height: 44px;
+    border: 2px solid #999999; border-radius: 44px;
+    background-color: #EEEEEE;
+    transition: background-color 0.3s ease-in;
+}
+.switch-label:before 
+{
+    content: "";
+    display: block; width: 44px; margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 43px;
+    border: 2px solid #999999; border-radius: 44px;
+    transition: all 0.3s ease-in 0s; 
+}
+.switch-checkbox:checked + .switch-label 
+{
+    background-color: #34A7C1;
+}
+.switch-checkbox:checked + .switch-label, .switch-checkbox:checked + .switch-label:before 
+{
+   border-color: #34A7C1;
+}
+.switch-checkbox:checked + .switch-label:before 
+{
+    right: 0px; 
+}
+.sectionbox
+{
+    
+}
+.button 	
+{
+    background-color:  #32cec1;/* Purple */
+    border: none;
+    color: white;
+    text-shadow: 0 0 10px black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:30px;
+    
+}
